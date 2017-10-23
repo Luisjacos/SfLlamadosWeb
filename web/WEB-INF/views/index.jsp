@@ -26,7 +26,7 @@
                         <a class="nav-link" href="#">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../views/registro.jsp">Registro</a>
+                        <a class="nav-link" href='<c:url value="/busqueda"/>'>Registro</a>
                     </li>
                 </ul>    
             </div>

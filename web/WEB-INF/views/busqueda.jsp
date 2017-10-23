@@ -3,7 +3,8 @@
     Created on : 20/10/2017, 11:46:09 AM
     Author     : ThinkPad X240
 --%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,19 +14,12 @@
     </head>
     <body>
         
-        <table>
-            <tr>
-                <th>Id</th>
-                <th>Descripción</th>
-            </tr>
-        <c:forEach items="${resultados}" var="resultado">
-            <tr>
-                <td>${resultado.id}</td>
-                <td>${resultado.descripcion}</td>
-            </tr>
-        </c:forEach>
-        </table>
-    </body>
-</html>
+   
+        
+        <c:out value="${visForm}"/>
+        
+    
+       
+  
     </body>
 </html>

@@ -5,25 +5,49 @@
  */
 package PackageController.dao;
 
-
+import PackageController.pojo.ViRowMapper;
 import PackageController.pojo.visualizacion;
 import java.util.List;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.sql.DataSource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 
-/**
- *
- * @author ThinkPad X240
- */
-public interface DaoImpl {
+public class DaoImpl implements Dao{
     
-    @RequestMapping("/registro")
-     public List<visualizacion> findAll(Model model);
-     
-     //public List<visualizacion> findByTipoLLamada(String tipoLlamado);
-     
-     
+    private NamedParameterJdbcTemplate jdbcTemplate;
+    
+     @Autowired
+     public void setDataSource(DataSource dataSource){
         
+        this.jdbcTemplate = new NamedParameterJdbcTemplate(dataSource);
+    }
+
+   @Override
+    public List<visualizacion> findAll() {
+        return  jdbcTemplate.query("select * from events",new ViRowMapper());
        
 }
+    }
+
+//    @Override
+//    public List<visualizacion> findByTipoLLamada(String tipoLlamado) {
+//        return jdbcTemplate.query("select *from events where tipoLlamado like :tipoLlamado"
+//                ,new MapSqlParameterSource("tipoLlamado", "%" + tipoLlamado + "%"),new ViRowMapper());
+//        
+//        
+//    }
+
+    
+
+    
+
+   
+    
+
