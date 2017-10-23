@@ -6,8 +6,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class controller {
     
-    @RequestMapping("*")    
+    @RequestMapping("/")
+    public String showIndex(){
+        return "/index";
+    }
+    
+    @RequestMapping("/about")
     public String showAbout(){
-        return "about";
+        return "/about";
     }
 }

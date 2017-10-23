@@ -54,6 +54,10 @@
                  </div>
             </div>
         </div>
+                
+                <footer>
+                    <a href='<c:url value="/about"/>'> Acerca de </a>
+                </footer>
     </body>
 
 </html>
