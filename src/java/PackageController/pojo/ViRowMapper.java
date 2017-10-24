@@ -5,11 +5,11 @@ import java.sql.SQLException;
 import org.springframework.jdbc.core.RowMapper;
 
 
-public class ViRowMapper implements RowMapper<visualizacion> {
+public class ViRowMapper implements RowMapper<busqueda> {
 
     @Override
-    public visualizacion mapRow(ResultSet rs, int i) throws SQLException {
-        visualizacion vis = new visualizacion();
+    public busqueda mapRow(ResultSet rs, int i) throws SQLException {
+        busqueda vis = new busqueda();
 
         vis.setIdEvents(rs.getInt("idEvents"));
         vis.setTipoLlamado(rs.getString("tipoLlamado"));

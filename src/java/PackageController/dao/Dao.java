@@ -6,7 +6,7 @@
 package PackageController.dao;
 
 
-import PackageController.pojo.visualizacion;
+import PackageController.pojo.busqueda;
 import java.util.List;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,11 +17,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author ThinkPad X240
  */
 public interface Dao {
-    
-    @RequestMapping("/registro")
-     public List<visualizacion> findAll();
-     
-     //public List<visualizacion> findByTipoLLamada(String tipoLlamado);
+  
+     public List<busqueda> findAll();
+     public List<busqueda> findByTipoLLamada(String tipoLlamado);
      
      
         

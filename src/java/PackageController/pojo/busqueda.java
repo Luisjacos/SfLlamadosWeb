@@ -23,7 +23,7 @@ import java.text.SimpleDateFormat;
  *
  * @author ThinkPad X240
  */
-public class visualizacion {
+public class busqueda {
     
   
     private int  idEvents;
@@ -61,13 +61,13 @@ public static String diferenciasDeFechas(Time tiempoInicio, Time tiempoFinal) {
    
      
     
-    public visualizacion(){
+    public busqueda(){
         
        
         
     }
   
-    public visualizacion (int idEvents, String tipoLlamado, String habitacion,Date fechaInicio,
+    public busqueda (int idEvents, String tipoLlamado, String habitacion,Date fechaInicio,
             Date fechaFinal, Time tiempoInicio, Time tiempoFinal){
        
         
@@ -134,7 +134,7 @@ public static String diferenciasDeFechas(Time tiempoInicio, Time tiempoFinal) {
     public String toString(){
                 
         return "Visualizacion [ idEvents=" +idEvents +", tipoLlamado="+ tipoLlamado +", "
-                + "habitacion="+ habitacion +", Tiempo en contestar el Llamado="+ visualizacion.diferenciasDeFechas(tiempoInicio, tiempoFinal);
+                + "habitacion="+ habitacion +", Tiempo en contestar el Llamado="+ busqueda.diferenciasDeFechas(tiempoInicio, tiempoFinal);
     }
     
 }

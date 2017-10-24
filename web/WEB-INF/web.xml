@@ -18,5 +18,18 @@
     
     <session-config>
         <session-timeout>30</session-timeout>
-    </session-config>    
+    </session-config> 
+    
+    <listener>
+        <listener-class> org.framework.web.context.ContextLoaderListener </listener-class>
+    </listener>   
+    
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            classpath:\web\WEB-INF\applicationContext.xml
+             classpath:\web\WEB-INF\serviceContext.xml
+        </param-value>
+    </context-param>
+    
 </web-app>

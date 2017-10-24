@@ -6,7 +6,7 @@
 package PackageController.dao;
 
 import PackageController.pojo.ViRowMapper;
-import PackageController.pojo.visualizacion;
+import PackageController.pojo.busqueda;
 import java.util.List;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -30,21 +30,21 @@ public class DaoImpl implements Dao{
     }
 
    @Override
-    public List<visualizacion> findAll() {
+    public List<busqueda> findAll() {
         return  jdbcTemplate.query("select * from events",new ViRowMapper());
        
 }
+    
+
+    @Override
+    public List<busqueda> findByTipoLLamada(String tipoLlamado) {
+        return jdbcTemplate.query("select *from events where tipoLlamado like :tipoLlamado"
+                ,new MapSqlParameterSource("tipoLlamado", "%" + tipoLlamado + "%"),new ViRowMapper());
+        
+        
     }
 
-//    @Override
-//    public List<visualizacion> findByTipoLLamada(String tipoLlamado) {
-//        return jdbcTemplate.query("select *from events where tipoLlamado like :tipoLlamado"
-//                ,new MapSqlParameterSource("tipoLlamado", "%" + tipoLlamado + "%"),new ViRowMapper());
-//        
-//        
-//    }
-
-    
+}
 
     
 
