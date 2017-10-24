@@ -18,7 +18,7 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
 
-
+@Component()
 public class DaoImpl implements Dao{
     
     private NamedParameterJdbcTemplate jdbcTemplate;

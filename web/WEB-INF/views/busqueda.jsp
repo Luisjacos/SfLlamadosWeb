@@ -14,9 +14,14 @@
     </head>
     <body>
         
-   
+        <c:forEach items="${busquedas}" var="busqueda">
+            
+            <c:out value="${busqueda}" /> <br/> <br/>
+            
+            
+        </c:forEach>
         
-        <c:out value="${visForm}"/>
+       
         
     
        

@@ -8,7 +8,6 @@ package PackageController.service;
 import PackageController.dao.Dao;
 import PackageController.pojo.busqueda;
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowire;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

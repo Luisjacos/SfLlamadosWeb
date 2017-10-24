@@ -6,16 +6,11 @@
 package PackageController.dao;
 
 
+
 import PackageController.pojo.busqueda;
 import java.util.List;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 
-/**
- *
- * @author ThinkPad X240
- */
 public interface Dao {
   
      public List<busqueda> findAll();

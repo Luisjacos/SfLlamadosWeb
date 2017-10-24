@@ -14,15 +14,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 
-
-
-
-
-
-/**
- *
- * @author ThinkPad X240
- */
 public class busqueda {
     
   
